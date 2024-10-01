@@ -128,8 +128,8 @@ Nesta camada, os dados são refinados para serem utilizados em análises e relat
 
 Os dados refinados são enviados para qualquer ferramenta de visualização como PowerBI , tableau entre outros.. Para visualizações interativas, usei o ODBC para conseguir pegar meus dados do S3 (ref-vedas e utlizar na ferramentaBI). Cada dataset é analisado separadamente, utilizando as melhores representações para compreensão por ferramentas de visualização:
 
-![GraficoBI](Bi1.png)
-![GraficoBI](Bi2.png)
+![GraficoBI](Bi_1.png)
+![GraficoBI](Bi_2.png)
 
 
 ## Conclusão e Recomendações
