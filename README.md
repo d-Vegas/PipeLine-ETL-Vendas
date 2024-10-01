@@ -24,7 +24,7 @@ Este projeto ETL tem como objetivo analisar dados de vendas online, extraídos d
 ## Arquitetura do Projeto
 A arquitetura geral do projeto é mostrada na imagem abaixo:
 
-![Arquitetura do Pipeline](Arquitetura.png)
+![Arquitetura do Pipeline](Arquiteturaa.png)
 
 ### Ferramentas Utilizadas:
 - **Amazon S3**: Para armazenar os dados nas diferentes camadas de processamento (Landzone, Silver, Gold).
@@ -70,7 +70,7 @@ Nesta camada, os dados passam por um pré-processamento para padronizar os valor
 - **Normalização de textos**: Conversão de textos para minúsculas e remoção de acentos.
 - **Conversão para Parquet**: Os arquivos CSV são convertidos para o formato Parquet para melhorar a eficiência e compressão.
 
-![Tabela FATO (Modelagem Dimensional)](StarSchema.png)
+![Tabela FATO (Modelagem Dimensional)](StarSchemaa.png)
 
 ### Camada Gold (Refinamento)
 Nesta camada, os dados são refinados para serem utilizados em análises e relatórios. Inclui a criação de tabelas específicas para insights e dashboards. Algumas das transformações realizadas nesta camada incluem:
