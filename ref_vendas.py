@@ -109,6 +109,20 @@ def lambda_handler(event, context):
             mode='overwrite'
         )
 
+        # Análise de Categorias de Produtos 
+        category_performance = df_fact_order_details.groupby('product_category_name').agg(
+            category_sales_volume=('order_item_id', 'count'),
+            category_conversion_rate=('order_status', lambda x: (x == 'delivered').sum() / x.count())
+        ).reset_index()
+
+        # Salvando a análise de categorias de produtos no S3
+        wr.s3.to_parquet(
+            df=category_performance,
+            path=f's3://{destination_bucket}/category_performance.parquet',
+            dataset=True,
+            mode='overwrite'
+        )
+
         print("Todos os Parquets foram criados e salvos no bucket REF.")
 
     except Exception as e:
